@@ -2,13 +2,21 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <title>Rock Paper Scissors</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="main.js" defer></script>
     </head>
     <body>
-        <script src="main.js"></script>
+        <h1>Rock Paper Scissors!</h1>
+        <div class='score-div'>Player <span id='playerScore'></span> - <span id='computerScore'></span> Computer</div>
+        <div class='text'><span id='pSelection'></span> vs <span id='cSelection'></span></div>
+        <div class='text' id = 'choose-msg' >Choose your weapon: </div>
+        <div class="rps-container">
+            <button class="rps-btn" id="rock"> <img src="./images/rock-icon.png"></button>
+            <button class="rps-btn" id="paper"><img src="./images/paper-icon.png"></button>
+            <button class="rps-btn" id="scissors"><img src="./images/scissors-icon.png"></button>
+        </div>
+        <div class='text' id='message'></div>
+        <div class='text' id='finalResult'></div>
     </body>
 </html>
