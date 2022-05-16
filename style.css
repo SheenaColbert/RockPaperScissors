@@ -1,0 +1,61 @@
+body{
+    background-color: #edc17b;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+}
+
+h1{
+    color: white;
+    font-family: Helvetica, 'Courier New', Courier, monospace;
+    font-size: 50px;
+    margin: 40px 0px;
+}
+
+
+.text, .score-div{
+    color: white;
+    font-family: Helvetica Neue, 'Courier New', Courier, monospace;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.score-div {
+    border: 2px solid #222522;
+    color: #d6dee2;
+    background-color: #e6bcd5;
+    padding: 30px;
+    border-radius: 8px;
+}
+
+#choose-msg{
+    font-weight: 600;
+}
+
+#computerScore, #playerScore {
+    font-size: 35px;
+    margin: 0px 10px;
+}
+
+.rps-container{
+    margin: 10px 10px;
+    width: 1000px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.rps-btn {
+    transition: all 1s ease;
+    background: none;
+    border: none;
+    border-radius: 100px ;
+    cursor:pointer;
+}
+
+.over {
+    transform: scale(1.1);
+}
+
