@@ -14,24 +14,30 @@ function computerPlay() {
 // Plays a single round of the game
 
 function playRound(playerSelection, computerSelection) {
-    if(playerSelection.toUpperCase() === computerSelection.toUpperCase()) {
+    const ROCK = 'rock'
+    const PAPER = 'paper'
+    const SCISSORS = 'scissors'
+    const human = playerSelection.toLowerCase()
+    const machine = computerSelection.toLowerCase()
+
+    if(human === machine) {
         document.getElementById('message').textContent = "It's a draw!";
     }
-    else if((playerSelection.toUpperCase() === 'ROCK' && computerSelection.toUpperCase() === 'PAPER') || 
-    (playerSelection.toUpperCase() === 'PAPER' && computerSelection.toUpperCase() === 'SCISSORS') ||
-    (playerSelection.toUpperCase() === 'SCISSORS' && computerSelection.toUpperCase() === 'ROCK')){
+    else if((human === ROCK && machine === PAPER) || 
+    (human === PAPER && machine === SCISSORS) ||
+    (human === SCISSORS && machine === ROCK)){
 
         computerScore++;
-        document.getElementById('message').textContent = "You Lose! "  + computerSelection + " beats " +  playerSelection[0].toUpperCase() + playerSelection.slice(1);
+        document.getElementById('message').textContent = "You Lose! "  + computerSelection + " beats " +  playerSelection[0].toLowerCase() + playerSelection.slice(1);
     } else {
         playerScore++;
-        document.getElementById('message').textContent = "You Win! " + playerSelection[0].toUpperCase() + playerSelection.slice(1)+ " beats " + computerSelection ;
+        document.getElementById('message').textContent = "You Win! " + playerSelection[0].toLowerCase() + playerSelection.slice(1)+ " beats " + computerSelection ;
     }
 
 }
 
 function updateScore(playerSelection,computerSelection){
-    document.getElementById('pSelection').textContent = playerSelection[0].toUpperCase() + playerSelection.slice(1);
+    document.getElementById('pSelection').textContent = playerSelection[0].toLowerCase() + playerSelection.slice(1);
     document.getElementById('cSelection').textContent = computerSelection;
     document.getElementById('playerScore').textContent = playerScore;
     document.getElementById('computerScore').textContent = computerScore;
@@ -44,7 +50,7 @@ function checkWinner() {
         } else if (playerScore > computerScore){
             document.getElementById('finalResult').textContent = "You win this time! ;)";
         } else {
-            document.getElementById('finalResult').textContent = "You lose, keep trying! :(";
+            document.getElementById('finalResult').textContent = "You lost, keep trying! :(";
         }
         return true;
     }
