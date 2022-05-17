@@ -65,7 +65,7 @@ function removeTransition(e) {
   function animations(){
     this.classList.add('over');
 }
-//Plays 5 rounds of the game, ask for the player selection
+// Plays 5 rounds of the game, ask for the player selection 
 
 function game(){
 
